@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/constants/constants.dart';
 import 'package:todo_app/screens/todo_list_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,11 +14,7 @@ class HomeScreen extends StatelessWidget {
         elevation: 0.0,
         title: const Text(
           'ToDo List',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 30,
-          ),
+          style: Constants.headingStyle,
         ),
         actions: [
           Padding(
@@ -25,16 +22,13 @@ class HomeScreen extends StatelessWidget {
             child: Container(
               height: 30,
               width: 40,
-              decoration: BoxDecoration(
-                color: Colors.purple.shade400,
-                shape: BoxShape.circle,
-              ),
+              decoration: Constants.addButtonDecoration,
               child: IconButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const TodoListScreen(),
+                      builder: (context) => TodoListScreen(),
                     ),
                   );
                 },
