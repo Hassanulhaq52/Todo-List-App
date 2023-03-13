@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_app/application/task_bloc.dart';
@@ -48,24 +46,21 @@ class TodoListScreen extends StatelessWidget {
             ],
           ),
           body: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30,),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20,
+              vertical: 30,
+            ),
             child: Column(
-
               // mainAxisAlignment: MainAxisAlignment.center,
               // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-
-                Text(state.task,
-                style: TextStyle(
-
-                  fontSize: 18,
-
+                Text(
+                  state.task,
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
                 ),
-                ),
-
               ],
-
-
             ),
           ),
         );
@@ -73,5 +68,3 @@ class TodoListScreen extends StatelessWidget {
     );
   }
 }
-
-
